@@ -1,0 +1,92 @@
+
+
+// Variables and functions
+@import "./modules-sass/functions";
+@import "./modules-sass/variables";
+
+// Base and layout
+
+@import "./modules-sass/base";
+@import "./modules-sass/breakpoints";
+@import "./modules-sass/grid";
+
+// Colors
+
+@import "./modules-sass/colors";
+
+// Components (button, card, navbar);
+
+@import "./modules-sass/components/Card";
+@import "./modules-sass/components/button";
+@import "./modules-sass/components/navbar";
+
+// Utilities (margin, padding, opacity)
+
+@import "./modules-sass/utilities";
+
+// Debajo coloco los estilos de añadidura...
+
+@include xs{
+
+    .desktop-none{
+
+        display: none;
+    }
+}
+
+@include sm{
+
+    .desktop-none{
+        display: flex;
+    }
+
+    .menu-none{
+
+        display: none;
+    }
+}
+
+
+.nav-slide{
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9998;
+    transition: transform .3s ease-in-out;
+}
+
+.eva{
+
+    transform: translateX(-100%);
+    
+}
+
+.p-relative{
+
+    position: relative;
+    
+}
+
+.close-svg > img{
+
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.menu-nav-slide{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
